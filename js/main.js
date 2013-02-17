@@ -23,7 +23,11 @@ require.config({
 			deps: ['backbone']
 		},
 		appCollection: {
-			deps: ['appModel']
+			deps: ['appModel', 'localstorage']
+		},
+		localstorage: {
+			deps: ['backbone'],
+			exports: 'Store'
 		}
 	},
 	paths: {
@@ -33,7 +37,8 @@ require.config({
 		appRouter: 'routers/appRouter',
 		appView: 'views/appView',
 		appModel: 'models/appModel',
-		appCollection: 'collections/appCollection'
+		appCollection: 'collections/appCollection',
+		localstorage: 'lib/backbone.localStorage'
 	}
 });
 

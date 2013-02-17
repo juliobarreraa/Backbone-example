@@ -23,9 +23,13 @@ define([], function() {
 			this.view = new app.view({el: jQuery('#content'), collection: this.collection});
 			this.view.render();
 		},
-		/*addNewElement: function()
+		addNewElement: function()
 		{
+			this.collection = new app.collection();
+
 			this.collection.add(new app.model( { title: 'Nuevo contenido añadido' } ));
-		}*/
+
+			console.log(this.collection);
+		}
 	});
 });
