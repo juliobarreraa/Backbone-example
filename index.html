@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+	<title>Backbone js</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<h1>Contenido</h1>
+	<div id="content"></div>
+	<script type="text/javascript" src="js/lib/require.js" data-main="js/main"></script>
+	<script type="text/template" id="template">
+	  <div>
+		  <% _(models).each(function(model) { %>
+			  	<p><b>Identificador: </b><%= model.id %></p>
+			  	<p><b>Titulo: </b><%= model.title %></p>
+		  <% }); %>
+		  <a href="#add_new_element">Añadir nuevo elemento.</a>
+	  </div>
+	</script>
+</body>
+</html>
